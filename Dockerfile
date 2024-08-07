@@ -1,16 +1,13 @@
-FROM rockylinux:9.3
-
-RUN yum -y update && yum clean all
+FROM node:20-alpine
 
 WORKDIR /app
 
 COPY  package*.json ./
 
-RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-RUN source ~/.bashrc && nvm install 20 && nvm use 20 && npm install && npm run build
+RUN npm install
 
 COPY . .
 
-ENV HELLO="world"
+RUN npm run build
 
-CMD [ "node", "build/Release/index.js" ]
+CMD [ "node", "--env-file=.env", "build/Release/index.js" ]

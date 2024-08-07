@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "node --env-file .env build/Release/index.js",
+    "development": "tsc && node --env-file .env build/Release/index.js",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

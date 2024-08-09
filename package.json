@@ -4,7 +4,7 @@
   "description": "",
   "main": "build/Release/index.js",
   "directories": {
-    "lib": "lib"
+    "src": "src"
   },
   "scripts": {
     "start": "node --env-file .env build/Release/index.js",
@@ -19,9 +19,9 @@
     "firebase": "^10.12.5"
   },
   "devDependencies": {
+    "typescript": "^5.5.4",
     "eslint": "^9.8.0",
     "globals": "^15.9.0",
-    "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.1"
   }
 }

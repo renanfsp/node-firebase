@@ -1,4 +1,6 @@
-FROM node:20-alpine
+FROM rockylinux:9.3
+
+RUN dnf update -y && dnf clean all && dnf module install nodejs:20 -y
 
 WORKDIR /app
 

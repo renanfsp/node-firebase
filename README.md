@@ -1,19 +1,19 @@
 # Node and Firebase
 
-Adicione as variaveis de ambiente ao arquivo *.env*
+Adicione as variaveis de ambiente manualmente ao arquivo *.env*
 
-`cp .env.example .env`
+`copy .env.example .env` # MS DOS
+
+`cp .env.example .env` # Unix-like systems
 
 ## Como Rodar
 ### Localmente
 Instale o [node.js](https://nodejs.org/pt/download/package-manager) na sua maquina
 ```
-$ curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh &&\
-    bash nodesource_setup.sh &&\
-    apt install nodejs # Ubuntu and debian based distros...
+$ curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh && bash nodesource_setup.sh && apt install nodejs # Ubuntu and debian based distros...
 $ dnf module install nodejs:20 # fedora and rhel based distros...
 $ brew install node@20 npm # macOS with Homebrew
-$ winget install OpenJS.NodeJS.LTS # Windows 10 1709 (build 16299) ou posterior 
+$ winget install OpenJS.NodeJS.LTS # Windows 10 1709 (build 16299) or later 
 ```
 
 
